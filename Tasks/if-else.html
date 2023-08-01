@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            text-align: center;
+            margin-top: 80px;
+         }
+    </style>
+</head>
+<body>
+    
+    
+    <h1>Assignment no.19</h1>
+    <p>Use If...else statement of JavaScript to write a code to 
+        Display “Good Morning” or “Good Afternoon” according to 
+        current Time</p>
+    <h1 id="demo">Timings</h1>
+    <script>
+    const hour = new Date().getHours(); 
+let greeting;
+if (hour>=5 && hour <10) {
+    greeting="Good Morning";
+}
+else if (hour>=10 && hour<2 ){
+    greeting="Good Afternoon";
+}
+else {
+    greeting="Good Night";
+}
+document.getElementById('demo').innerHTML=greeting;
+</script>
+
+    
+</body>
+</html>

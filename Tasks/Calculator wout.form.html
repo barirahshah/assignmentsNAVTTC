@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    /* Basic CSS styling for calculator layout */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .calculator {
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    .result {
+      padding: 10px;
+      font-size: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 48%;
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <div class="result" id="display">0</div>
+    <!-- Buttons for numbers and operators -->
+    <button type="button" onclick="appendToDisplay('7')">7</button>
+    <button type="button" onclick="appendToDisplay('8')">8</button>
+    <button type="button" onclick="appendToDisplay('9')">9</button>
+    <button type="button" onclick="appendToDisplay('+')">+</button>
+    <br>
+    <button type="button" onclick="appendToDisplay('4')">4</button>
+    <button type="button" onclick="appendToDisplay('5')">5</button>
+    <button type="button" onclick="appendToDisplay('6')">6</button>
+    <button type="button" onclick="appendToDisplay('-')">-</button>
+    <br>
+    <button type="button" onclick="appendToDisplay('1')">1</button>
+    <button type="button" onclick="appendToDisplay('2')">2</button>
+    <button type="button" onclick="appendToDisplay('3')">3</button>
+    <button type="button" onclick="appendToDisplay('*')">*</button>
+    <br>
+    <button type="button" onclick="appendToDisplay('0')">0</button>
+    <button type="button" onclick="clearDisplay()">C</button>
+    <button type="button" onclick="calculate()">=</button>
+    <button type="button" onclick="appendToDisplay('/')">/</button>
+  </div>
+
+  <script>
+    let display = document.getElementById("display");
+
+    // Functions for calculator operations
+    function appendToDisplay(value) {
+      display.innerHTML = (display.innerHTML === "0") ? value : display.innerHTML + value;
+    }
+
+    function clearDisplay() {
+      display.innerHTML = "0";
+    }
+
+    function calculate() {
+      try {
+        display.innerHTML = eval(display.innerHTML);
+      } catch (error) {
+        display.innerHTML = "Error";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootform.css">
+</head>
+<body>
+    <div  class="align">
+    <h1>Assignment no.15</h1>
+    <p>Make a form using Bootstrap classes for buttons and
+        forms.</p>
+    </div>
+
+<div class="container bg-info">
+
+  <h2 style="text-align: center;">FORM</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+        <label for="fname">First Name:</label>
+        <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+      </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="courses">Select Relevent Course:</label>
+        <select class="form-control" id="courses">
+          <option>Web development</option>
+          <option>Cyber security</option>
+          <option>Word aand Excel</option>
+          <option>Computer courses</option>
+        </select>
+        <br>
+      <label class="radio-inline"> Gender
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="male">Male
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="female">Female
+      </label>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+
+
+</body>
+</html>
